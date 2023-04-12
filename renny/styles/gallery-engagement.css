@@ -1,0 +1,89 @@
+body {
+    background-color: #999;
+    margin: 0;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(69, 69, 69);
+    height: 90px;
+    display: flex;
+  }
+  #logo {
+    height: 100px;
+    width: 150px;
+    margin: 5px;
+  }
+  h5 {
+    color: rgb(235, 239, 239);
+    font-family: "Roboto Condensed", sans-serif;
+    margin-top: 70px;
+  }
+  h3 {
+    color: azure;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  .nav-elements {
+    display: flex;
+    text-indent: 30px;
+    position: absolute;
+    right: 50px;
+  }
+
+  .gallery {
+    background-color:rgb(0, 0, 0);
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 25px;
+  }
+  
+  /* .gallery a {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+   */
+  .gallery a:hover {
+    border-color: #999;
+  }
+  
+
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (min-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  /* Touch and Zoom Styles */
+  
+  .gallery img {
+    touch-action: pan-y pinch-zoom;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  
+  .gallery img:active {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+  
